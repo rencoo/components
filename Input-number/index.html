@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 将myinput改为input就可以使用v-model代替v-bind:value= + v-on:myinput了 -->
+        <input-number 
+            :value="value"
+            @myinput="value = $event"
+            :max="10" 
+            :min="0"
+        ></input-number>
+    </div>
+    <!-- <script src="https://unpkg.com/vue/dist/vue.min.js"></script> -->
+    <!-- 使用开发版本, 进行prop校验 -->
+    <script src="libs/vue.js"></script>
+    <script src="input-number.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
